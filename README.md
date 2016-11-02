@@ -15,3 +15,8 @@
 ```
 https://www.scala-exercises.org/std_lib
 ```
+
+## Scala School
+```
+https://twitter.github.io/scala_school/ko/
+```
