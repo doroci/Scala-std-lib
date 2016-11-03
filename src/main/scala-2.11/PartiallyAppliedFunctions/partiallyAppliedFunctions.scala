@@ -7,6 +7,11 @@ object partiallyAppliedFunctions {
 
   def sum(a: Int, b: Int, c: Int) = a+b+c
   def multiply(x: Int, y: Int) = x*y
+  def customFilter(f: Int => Boolean)(xs: List[Int])={
+    xs filter f
+  }
+  def onlyEven(x:Int) = x % 3 == 0
+  val xs = List(12, 11, 5, 20, 3, 13, 2)
 
   def main(args : Array[String]): Unit ={
     val sumTest = sum _
@@ -31,5 +36,9 @@ object partiallyAppliedFunctions {
     val multiplyCurreidAdd = multiplyCurried(4)  // Int => Int = <function1>
       System.out.println(multiplyCurreidAdd(5))
       System.out.println("------------------------------")
+
+    val onlyEvenFilter = customFilter(onlyEven) _ // List[Int] => List[Int] = <function1>
+      System.out.println(onlyEvenFilter(xs))
+
   }
 }
