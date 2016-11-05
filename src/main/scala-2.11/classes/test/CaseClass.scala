@@ -1,4 +1,5 @@
-package classes
+package classes.test
+
 /**
   * Created by lee on 2016. 11. 2..
   */
@@ -25,7 +26,7 @@ object CaseClass {
 
 }
 
-case class TestClass(name : String, age : Integer)
+
 
 
 

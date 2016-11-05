@@ -1,4 +1,4 @@
-package PartiallyAppliedFunctions
+package partiallyAppliedFunctions
 
 /**
   * Created by lee on 2016. 11. 4..
