@@ -10,13 +10,19 @@
    'InteliJ install'
    https://www.jetbrains.com/idea/download/
 ```
+###Env 3. Scala Version
+```
+    2.1.1
+```
+###
 
-### SCALA EXERCISES
+
+###Reference SCALA EXERCISES
 ```
 https://www.scala-exercises.org/std_lib
 ```
 
-## Scala School
+###Reference Scala School
 ```
 https://twitter.github.io/scala_school/ko/
 ```
