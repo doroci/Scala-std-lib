@@ -24,10 +24,14 @@ object HigherOrderFunctions {
 
   }
 
+  val lambda2 : (Int,Int) => Int = (v1,v2) => v1+v2
+
 
   def main(args : Array[String]): Unit ={
     System.out.println(lambda.apply("good"))
     System.out.println(lambda1.apply(12,15))
+    System.out.println(lambda2(12,15))
+
   }
 
  }
