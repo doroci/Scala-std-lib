@@ -19,7 +19,9 @@ object Extractors {
       case _ ⇒ "No I haven't"
     }
 
+    println("-------------------------------------------------")
     println(s"result, ${result }") // The "s" is String Interpolator
+    println("-------------------------------------------------")
 
     class Car(val make: String, val model: String, val year: Short, val topSpeed: Short)
 
@@ -29,10 +31,40 @@ object Extractors {
 
     val ChopShop(a, b, c, d) = new Car("Chevy", "Camaro", 1978, 120)
 
+    println("-------------------------------------------------")
     println(s"a: ${a}, b: ${b}, c: ${c}, d: ${d}")
+    println("-------------------------------------------------")
+
+    val x = new Car("Chevy", "Camaro", 1978, 120) match {
+      case ChopShop(v1,v2,v3,v4) => (v1, v2)
+      case _ => ("Ford","Edsel")
+    }
+
+    println("-------------------------------------------------")
+    println(s"x._1: ${x._1}, x._2: ${x._2}")
+    println("-------------------------------------------------")
+
+
+    class TokenCar(val make: String, val model: String, val year: Short, val topSpeed: Short)
+    class TokenEmployee(val firstName: String, val middleName: Option[String], val lastName: String)
+
+    object Tokenizer {
+      def unapply(x: TokenCar) = Some(x.make, x.model, x.year, x.topSpeed)
+
+      def unapply(x: TokenEmployee) = Some(x.firstName, x.lastName)
+    }
+
+    val tokenResult = new TokenEmployee("Kurt", None, "Vonnegut") match {
+      case Tokenizer(c, d) ⇒ "c: %s, d: %s".format(c, d)
+      case _ ⇒ "Not found"
+    }
+
+    println("-------------------------------------------------")
+    println(s"tokenResult, ${tokenResult}")
+    println("-------------------------------------------------")
+
 
   }
-
 
 
 }
