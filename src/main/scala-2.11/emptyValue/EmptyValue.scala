@@ -3,7 +3,7 @@ package emptyValue
 /**
   * Created by lee on 2017. 1. 16..
   */
-object EmptyValue {
+object EmptyValue extends App{
 
   /*
 
@@ -28,6 +28,53 @@ object EmptyValue {
           And since we know there are no instances of Nothing, we now have a list that is statically verifiable as empty.
 
    */
+
+
+  val t1 = List() == Nil
+  val t2 = None == None
+  val t3 = None eq None
+  val t4 = None.toString == None.toString
+  val t5 = None.toList == Nil
+  val t6 = None.isEmpty == None.isEmpty
+  val t7 = None.asInstanceOf[Any] == None
+  val t8 = None.asInstanceOf[AnyRef] == None
+  val t9 = None.asInstanceOf[AnyVal] == None
+
+  val optionalNone: Option[String] = None
+  val t10 = optionalNone.isEmpty
+  val t11 = optionalNone == None
+
+  val optionalSome: Option[String] = Some("test")
+  val t12 = optionalSome.isEmpty == None
+  val t13 = optionalSome == None
+
+  //default value
+  val t14 = optionalNone.getOrElse("test")
+  val t15 = optionalNone.getOrElse(",test")
+
+  //Option value
+  val t16 = optionalSome.getOrElse("test")
+  val t17 = optionalSome.getOrElse(",test")
+
+
+  println(s"List() == Nil, ${t1}")
+  println(s"None == None, ${t2}")
+  println(s"None eq Nonem ${t3}")
+  println(s"None.toString == None.toString, ${t4}")
+  println(s"None.toList == Nil, ${t5}")
+  println(s"None.isEmpty == None.isEmpty, ${t6}")
+  println(s"None.asInstanceOf[Any] == None, ${t7}")
+  println(s"None.asInstanceOf[AnyRef] == None, ${t8}")
+  println(s"None.asInstanceOf[AnyVal] == None, ${t9}")
+  println(s"optionalNone.isEmpty, ${t10}")
+  println(s"optionalNone == None, ${t11}")
+  println(s"optionalSome.isEmpty, ${t12}")
+  println(s"optionalSome == None, ${t13}")
+
+  println(s"optionalNone.getOrElse('test'), ${t14}")
+  println(s"optionalNone.getOrElse(',test'), ${t15}")
+  println(s"optionalSome.getOrElse('test'), ${t16}")
+  println(s"optionalSome.getOrElse(',test'), ${t17}")
 
 
 
