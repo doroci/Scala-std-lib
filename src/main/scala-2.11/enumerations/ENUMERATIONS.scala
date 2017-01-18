@@ -39,26 +39,25 @@ object Enumerations extends App{
     val H = Value("Hint")
   }
 
-
   println("--------------------------------------------------------------------------------")
   println(s" Alphabet.A, ${Alphabet.A}")
   println(s" Alphabet.A.id, ${Alphabet.A.id}") // index value
   println(s" Alphabet.A.toString, ${Alphabet.A.toString}")
-  println(s" Alphabet.A == Alphabet.A.toString, ${Alphabet.A == Alphabet.A.toString}")
+  println(s" Alphabet.A == Alphabet.A.toString, ${Alphabet.A == Alphabet.A.toString}") // Agent: Alphabet.Value, Agent: String
   println(s" Alphabet.A == Alphabet.A, ${Alphabet.A == Alphabet.A}")
   println(s" Alphabet.A == Alphabet.B, ${Alphabet.A == Alphabet.B}")
   println("--------------------------------------------------------------------------------")
   println(s" Alphabet2.A, ${Alphabet2.A}")
   println(s" Alphabet2.A.id, ${Alphabet2.A.id}") // index value
   println(s" Alphabet2.A.toString, ${Alphabet2.A.toString}")
-  println(s" Alphabet2.A == Alphabet2.A.toString, ${Alphabet2.A == Alphabet2.A.toString}")
+  println(s" Alphabet2.A == Alphabet2.A.toString, ${Alphabet2.A == Alphabet2.A.toString}") // Agent: Alphabet.Value, Agent: String
   println(s" Alphabet2.A == Alphabet2.A, ${Alphabet2.A == Alphabet2.A}")
   println(s" Alphabet2.A == Alphabet2.B, ${Alphabet2.A == Alphabet2.B}")
   println("--------------------------------------------------------------------------------")
   println(s" Alphabet3.A, ${Alphabet3.A}")
   println(s" Alphabet3.A.id, ${Alphabet3.A.id}") // index value
   println(s" Alphabet3.A.toString, ${Alphabet3.A.toString}")
-  println(s" Alphabet3.A == Alphabet3.A.toString, ${Alphabet3.A == Alphabet3.A.toString}")
+  println(s" Alphabet3.A == Alphabet3.A.toString, ${Alphabet3.A == Alphabet3.A.toString}") // Agent: Alphabet.Value, Agent: String
   println(s" Alphabet3.A == Alphabet3.A, ${Alphabet3.A == Alphabet3.A}")
   println(s" Alphabet3.A == Alphabet3.B, ${Alphabet3.A == Alphabet3.B}")
 
